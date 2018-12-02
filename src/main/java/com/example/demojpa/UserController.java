@@ -50,9 +50,9 @@ public class UserController {
     }
     
     @PostMapping
-    public ResponseEntity<?> post(@RequestBody User input) {
-        service.saveUser(input);
-        return null;
+    public User post(@RequestBody User input) {
+        return service.saveUser(input);
+        //return null;
     }
     
     @DeleteMapping("/{id}")
